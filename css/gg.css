@@ -1,0 +1,150 @@
+*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				border: 0;
+			}
+			/*头部样式*/
+			.header{
+				width: 100%;
+				background: lightcyan;
+				padding: 20px 40px;
+				position: relative;
+				overflow: visible;
+			}
+			.header input[type="checkbox"],.menu{
+				display: none;
+			}
+			/*头部的导航*/
+			.header ul{
+				overflow: hidden;
+			}
+			.header ul li{
+				list-style: none;
+				float: left;
+				margin: 0 35px;
+			}
+			/*导航链接初始状态*/
+			.header ul li a{
+				font-size: 20px;
+				font-family: "楷体";
+				color: deepskyblue;
+				text-decoration: none;
+				transition: 0.5s all;
+			}
+			/*导航链接hover状态及首页链接的状态*/
+			.header ul li a:hover,.header ul li a.active{
+				color: green;
+			}
+			/*logo的显示区域设置宽度和定位*/
+			.logo{
+				width: 10%;
+				position: absolute;
+				top: 0;
+				right: 1%;
+			}
+			/*logo图片的大小*/
+			.logo img{
+				width: 100%;
+			}
+			/*banner部分样式*/
+			.banner,.banner img{
+				width: 100%;
+			}
+			/*mission部分样式*/
+			.mission{
+				width: 100%;
+				background: lightskyblue;
+				padding: 30px;
+			}
+			.mission-header h3{
+				color: red;
+				text-align: center;
+				font-family: "微软雅黑";
+				font-size: 2.4em;
+				font-weight: 400;
+			}
+			.mission-container{
+				margin-top: 20px;
+				overflow: hidden;
+				display: flex;
+			}
+			.mission-left{
+				
+				flex: 1;
+				padding: 0 10px;
+			}
+			.mission-left img{
+				width: 100%;
+			}
+			.mission-right{
+				
+				flex: 1;
+				padding: 0 10px;
+			}
+			.mis{
+				width: 100%;
+				margin-bottom: 2rem;
+				overflow: hidden;
+				display: flex;
+			}
+			.mis-left{
+				
+				flex: 1;
+				margin-left: 10px;
+			}
+			.mis-left img{
+				width: 100%;
+			}
+			.mis-right{
+				
+				flex: 6;
+			}
+			.mis-right h3{
+				font-family: 宋体;
+				font-size: 1em;
+				color: orangered;
+			}
+			.mis-right p{
+				font-size: 0.85em;
+				line-height: 1.8em;
+				margin-top: 12px;
+				text-indent: 2em;
+			}
+			.footer{
+				/* text-decoration: none; */
+				width: 100%;
+				padding: 14px 0;
+				background: #87CEFA;
+			}
+			.footer p{
+				text-align: center;
+				color: #fff;
+				margin: 9px 0;
+			}
+			@media (max-width:720px){
+				.header .menu{
+					display: block;
+					cursor: pointer;
+				}
+				.header nav ul{
+					display: none;
+				}
+				nav input[type="checkbox"]:checked~ul{
+					display: block;
+				}
+				.header ul li{
+					display: block;
+					width: 100%;
+					text-align: center;
+					margin: 5px 0;
+				}
+				.mission-container{
+				display: flex;
+				flex-flow: column;
+			}
+				.mission-left{
+					margin-bottom: 10px;
+				}
+				
+			}

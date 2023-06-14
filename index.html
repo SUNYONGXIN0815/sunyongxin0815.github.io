@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<title>故宫旅行</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;/* 规定两个并排的带边框的框： */
+				border: 0;
+			}
+			/*头部样式*/
+			.header{
+				width: 100%;
+				background: lightcyan;
+				padding: 20px 40px;
+				position: relative;/* 相对定位 */
+				overflow: visible;/* 属性规定当内容溢出元素框时发生的事情。 *//* 默认值。内容不会被修剪，会呈现在元素框之外。 */
+			}
+			.header input[type="checkbox"],.menu{
+				display: none;/* 隐藏 *//* 弹性布局 */
+			}
+			
+			/*头部的导航*/
+			.header ul{
+				overflow: hidden;  /* 溢出隐藏 */
+			}
+			.header ul li{
+				list-style: none;/* 简写属性在一个声明中设置所有的列表属性。 */
+				float: left;
+				margin: 0 60px;
+			}
+			/*导航链接初始状态*/
+			.header ul li a{
+				font-size: 20px;
+				font-family: "楷体";
+				color: deepskyblue;
+				text-decoration: none;/* 属性规定添加到文本的修饰 */
+				transition: 0.5s all; /* 过渡动画 */
+			}
+			/*导航链接hover状态及首页链接的状态*/
+			.header ul li a:hover,.header ul li a.active{
+				color: green;
+			}
+			/*logo的显示区域设置宽度和定位*/
+			.logo{
+				width: 10%;
+				position: absolute;/* 绝对定位 */
+				top: 0;
+				right: 1%;
+			}
+			/*logo图片的大小*/
+			.logo img{
+				width: 100%;
+			}
+			/*banner部分样式*/
+			
+			/*mission部分样式*/
+			.mission{
+				width: 100%;
+				background: skyblue;
+				padding: 30px;
+			}
+			.mission-header h3{
+				color: red;
+				text-align: center;
+				font-family: "微软雅黑";
+				font-size: 2.4em;
+				font-weight: 400;
+			}
+			.mission-container{
+				margin-top: 20px;
+				overflow: hidden;/* 溢出隐藏 */
+				display: flex;/* 弹性布局 */
+			}
+			}
+			.mission-left{
+				
+				flex: 1;
+				padding: 0 10px;
+			}
+			/* .mission-left img{
+				width: 100%;
+			} */
+			.mission-right{
+				
+				flex: 1;
+				padding: 0 10px;
+			}
+			.mis{
+				width: 100%;
+				margin-bottom: 2rem;
+				overflow: hidden;/* 溢出隐藏 */
+				display: flex;
+			}
+			.mis-left{
+				
+				flex: 1;/* 属性用于设置或检索弹性盒模型对象的子元素如何分配空间。 */
+				margin-left: 10px;/* 左边距 */
+			}
+			.mis-left img{
+				width: 100%;
+			}
+			.mis-right{
+				
+				flex: 6;
+			}
+			.mis-right h3{
+				font-family: 宋体;
+				font-size: 1em;
+				color: orangered;
+			}
+			.mis-right p{
+				font-size: 0.85em;
+				line-height: 1.8em;line-height /* 属性设置行间的距离（行高） */
+				margin-top: 12px;
+				text-indent: 2em;/* 属性规定文本块中首行文本的缩进 */
+			}
+			.footer{
+				width: 100%;
+				padding: 14px 0;
+				background: deepskyblue;
+			}
+			.footer p{
+				text-align: center;
+				color: #fff;
+				margin: 9px 0;
+			}
+			@media (max-width:720px){
+				.header .menu{
+					display: block;
+					cursor: pointer;/* 属性规定要显示的光标的类型（形状）。设定鼠标的形状为一只伸出食指的手 */
+				}
+				.header nav ul{
+					display: none;
+				}
+				nav input[type="checkbox"]:checked~ul{
+					display: block;
+					
+				}
+				.header ul li{
+					display: block;	/* 此元素将显示为块级元素，此元素前后会带有换行符。 */
+					width: 100%;
+					/* text-align: center; */
+					float: left;
+					margin: 2px 0;
+					
+				}
+				.mission-container{
+				display: flex;
+				flex-flow: column;/* 属性用于设置或检索弹性盒模型对象的子元素排列方式。 */
+			}
+				.mission-left{
+					margin-bottom: 10px;
+				}
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部部分-->
+		<div class="header">
+			<label class="menu" for="togglebox">  <!-- 定义标注（标记）。 -->
+				<img src="img/002.png" alt="" />
+			</label>
+			<nav> <!--导航栏-->
+				<input type="checkbox" id="togglebox" />
+				<ul>
+					<li><a class="active" href="#">首页</a></li>
+					<li><a href="scenery.html">景点列表</a></li>
+					<li><a href="food.html">景点小吃</a></li>
+					<li><a href="strategy.html">旅游攻略</a></li>
+					<li><a href="video.html">视频欣赏</a></li>
+					<li><a href="form.html">投诉建议</a></li>
+				</ul>
+			</nav>
+			<div class="logo">  <!--logo图片-->
+				<img src="img/logo.jfif" alt="" id="sy"/>
+			</div>
+		</div>
+		<div id="sss" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/012.jpg" alt="" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="img/013.jpg" alt="" class="d-block w-100" >
+				</div>
+				<div class="carousel-item">
+					<img src="img/010.jpg" alt="" class="d-block w-100">
+				</div>
+				
+				<a class="carousel-control-prev" href="#sss" role="button" data-slide="prev" >
+					<span class="carousel-control-prev-icon"></span>
+					<span class="sr-only">上一张</span>
+				</a>
+				<a class="carousel-control-next" href="#sss" role="button" data-slide="next" >
+					<span class="carousel-control-next-icon"></span>
+					<span class="sr-only">下一张</span>
+				</a>
+				<ol class="carousel-indicators">
+					<li data-target="#sss" data-slide-to="0" class="active">
+					<li data-target="#sss" data-slide-to="1">
+					<li data-target="#sss" data-slide-to="2">
+				</ol>
+			</div>
+		</div>
+		
+		<!--mission部分-->
+		<div class="mission">
+			<div class="mission-header"> <!--主体部分的标题-->
+				<h3 id="jdlb"><i>欢迎来故宫游玩！</i></h3>
+			</div>
+			<div class="mission-container">  <!--主体部分的内容-->
+				<div class="mission-right">  <!--主体部分右侧-->
+					<div class="mis">  <!--主体部分右侧的第一个分类-->
+						<div class="mis-left">  <!--分类的左侧图片-->
+							<img src="img/qqg.jpg" alt=""/>
+						</div>
+						<div class="mis-right">  <!--分类的右侧文字-->
+							<h3><b>乾清宫</b></h3>
+							<p>
+							乾清宫，内廷后三宫之一，位于北京市故宫内廷中路。始建于明代永乐十八年（1420年），明清两代曾因数次被焚                            毁而重建，现有建筑为清代嘉庆三年（1798年）所建。建筑占地面积约1400㎡。
+							乾清宫为黄琉璃瓦重檐庑殿顶，座落在单层汉白玉石台基之上，连廊面阔9间，进深5间，自台面至正脊高20余米。                            殿内明间、东西次间相通。后檐两金柱间设屏，屏前设宝座，宝座上方悬“正大光明”匾。
+							</p>
+						</div>
+					</div>
+					<div class="mis">  <!--主体部分右侧的第二个分类-->
+						<div class="mis-left">  <!--分类的左侧图片-->
+							<img src="img/kng.jpg" alt=""/>
+						</div>
+						<div class="mis-right">  <!--分类的右侧文字-->
+							<h3><b>坤宁宫</b></h3>
+							<p>
+							坤宁宫始建于明朝永乐十八年（1420年），正德九年（1514年）、万历二十四年（1596年）两次毁于火，万历三十三年（1605年）重建。
+							在古代皇后的地位跟皇帝相对，是天下女性中最尊贵的，皇帝是天，皇后就是地，皇帝是乾，皇后是坤，皇后也是天下间之唯一，皇后的寝宫取自道德经中的，“地得一以宁”这一句，故名坤宁宫，同理“天得一以清”，皇帝寝宫名乾清宫。所以坤宁宫与乾清宫分别为皇后与皇帝的寝宫。
+							</p>
+						</div>
+					</div>
+					<div class="mis">  <!--主体部分右侧的第三个分类-->
+						<div class="mis-left">  <!--分类的左侧图片-->
+							<img src="img/jlb.jfif" alt=""/>
+						</div>
+						<div class="mis-right">  <!--分类的右侧文字-->
+							<h3><b>九龙壁</b></h3>
+							<p>
+							九龙壁，是影壁的一种，是中国传统建筑中用于遮挡视线的墙壁。位于紫禁城宁寿宫区皇极门外南三宫后。
+							九龙壁，壁长29.47m，高3.59m，厚0.459m，重达300多吨。是一座背倚宫墙而建的单面琉璃影壁，为乾隆三十七年(1770年)改建宁寿宫时烧造。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="mission-right">  <!--主体部分右侧-->
+					<div class="mis">  <!--主体部分右侧的第一个分类-->
+						<div class="mis-left">  <!--分类的左侧图片-->
+							<img src="img/thd.jpg" alt=""/>
+						</div>
+						<div class="mis-right">  <!--分类的右侧文字-->
+							<h3><b>太和殿</b></h3>
+							<p>
+							太和殿，俗称“金銮殿”，位于紫禁城南北主轴线的显要位置，
+							明永乐十八年（1420年）建成，称奉天殿。嘉靖四十一年（1562年）改称皇极殿。
+							清顺治二年（1645年）改今名。自建成后屡遭焚毁，又多次重建，今天所见为清代康熙三十四年(1695年)重建后的形制。上承重檐庑殿顶，下坐3层汉白玉台阶，采用金龙和玺彩画，屋顶仙人走兽多达11件，开间11间，均采用最高形制。为中国现存最大木构架建筑之一，太和殿匾额"建极绥猷"匾，为乾隆皇帝的御笔，现存的牌匾为复制品。
+							</p>
+						</div>
+					</div>
+					<div class="mis">  <!--主体部分右侧的第二个分类-->
+						<div class="mis-left">  <!--分类的左侧图片-->
+							<img src="img/yhy.jpg" alt=""/>
+						</div>
+						<div class="mis-right">  <!--分类的右侧文字-->
+							<h3><b>御花园</b></h3>
+							<p>
+							御花园位于北京紫禁城中轴线上大内最北部，坤宁宫后方，明代称为宫后苑，清代称御花园。始建于明永乐十八年 (1420年)，以后曾有增修，现仍保留初建时的基本格局。全园南北纵80m，东西宽140m，占地面积12000㎡。园内主体建筑钦安殿为重檐盝顶式，坐落于紫禁城的南北中轴线上，以其为中心，向前方及两侧铺展亭台楼阁。园内青翠的松、柏和竹间点缀着山石，形成四季常青的园林景观。
+							</p>
+						</div>
+					</div>
+					<div class="mis">  <!--主体部分右侧的第三个分类-->
+						<div class="mis-left">  <!--分类的左侧图片-->
+							<img src="img/jl.jpg" alt=""/>
+						</div>
+						<div class="mis-right">  <!--分类的右侧文字-->
+							<h3><b>紫禁城角楼</b></h3>
+							<p>
+							紫禁城角楼位于北京市东城区，是一座四面凸字形平面组合的多角建筑，屋顶有三层，
+							上层是纵横搭交的歇山顶，由两坡流水的悬山顶与四面坡的庑殿组合而成，
+							因这种屋顶上有九条主要屋脊，所以称做九脊殿。
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--页脚部分-->
+		<div class="footer">
+			<p>The copyright bolder is Sunyongxin Yueshuhao Zangweilong  </p>
+		</div>
+		
+		<script src="js/jquery-3.5.1.slim.min.js"></script>
+		
+		<script src="js/popper.min.js"></script>
+		
+		<script src="js/bootstrap.min.js"></script>
+		
+	</body>
+</html>

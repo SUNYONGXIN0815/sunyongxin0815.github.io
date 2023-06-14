@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>景点列表</title>
+	<style type="text/css">
+		
+		*{
+						padding: 0;
+						margin: 0;
+						box-sizing: border-box;
+						border: 0;
+					}
+					/*头部样式*/
+					.header{
+						width: 100%;
+						background: lightcyan;
+						padding: 20px 40px;
+						position: relative;
+						overflow: visible;
+					}
+					.header input[type="checkbox"],.menu{
+						display: none;
+					}
+					/*头部的导航*/
+					.header ul{
+						overflow: hidden;
+					}
+					.header ul li{
+						list-style: none;
+						float: left;
+						margin: 0 80px;
+					}
+					/*导航链接初始状态*/
+					.header ul li a{
+						font-size: 20px;
+						font-family: "楷体";
+						color: deepskyblue;
+						text-decoration: none;
+						transition: 0.5s all;
+					}
+					/*导航链接hover状态及首页链接的状态*/
+					.header ul li a:hover,.header ul li a.active{
+						color: green;
+					}
+					/*logo的显示区域设置宽度和定位*/
+					.logo{
+						width: 10%;
+						position: absolute;
+						top: 0;
+						right: 1%;
+					}
+					/*logo图片的大小*/
+					
+					/*banner部分样式*/
+					.banner,.banner img{
+						width: 100%;
+					}
+					/*mission部分样式*/
+					.mission{
+						width: 100%;
+						background: lightskyblue;
+						padding: 30px;
+					}
+					.mission-header h3{
+						color: red;
+						text-align: center;
+						font-family: "微软雅黑";
+						font-size: 2.4em;
+						font-weight: 400;
+					}
+					.mission-container{
+						margin-top: 20px;
+						overflow: hidden;
+						display: flex;
+					}
+					.mission-left{
+						
+						flex: 1;
+						padding: 0 10px;
+					}
+					.mission-left img{
+						width: 100%;
+					}
+					.mission-right{
+						
+						flex: 1;
+						padding: 0 10px;
+					}
+					.mis{
+						width: 100%;
+						margin-bottom: 2rem;
+						overflow: hidden;
+						display: flex;
+					}
+					.mis-left{
+						
+						flex: 1;
+						margin-left: 10px;
+					}
+					.mis-left img{
+						width: 100%;
+					}
+					.mis-right{
+						
+						flex: 6;
+					}
+					.mis-right h3{
+						font-family: 宋体;
+						font-size: 1em;
+						color: orangered;
+					}
+					.mis-right p{
+						font-size: 0.85em;
+						line-height: 1.8em;
+						margin-top: 12px;
+						text-indent: 2em;
+					}
+					
+					@media (max-width:720px){
+						.header .menu{
+							display: block;
+							cursor: pointer;
+						}
+						.header nav ul{
+							display: none;
+						}
+						nav input[type="checkbox"]:checked~ul{
+							display: block;
+						}
+						.header ul li{
+							display: block;
+							width: 100%;
+							text-align: center;
+							margin: 5px 0;
+						}
+						.mission-container{
+						display: flex;
+						flex-flow: column;
+					}
+						.mission-left{
+							margin-bottom: 10px;
+						}
+						
+					}
+					
+					
+		.container{
+			width: 100%;
+			position: absolute;
+			background-color: #fff;
+			
+		}
+		
+		
+		/* scenery */
+		.scenery{
+			width: 100%;
+			height: 800px;
+			position: relative;
+			text-align: center;
+		}
+		.scenery h5{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			margin: 0;
+			padding: 10px;
+			color: red;
+			font-size: 20px;
+			
+		}
+		
+		.scenery ul{
+			width: 70%;
+			height: 670px;
+			margin: 0 auto;
+			position: relative;
+			list-style: none;
+			padding: 0;
+		}
+		.scenery ul li{
+			width: 31%;
+			height: 200px;
+			float: left;
+			margin: 20px 1% 0 1%;
+		}
+		.scenery ul li img{
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+		}
+		.scenery p{
+			width: 80%;
+			height: 50px;
+			line-height: 25px;
+			font-size: 14px;
+			color: red;
+			margin:20px auto;
+		}
+		
+		.footer{
+			/* text-decoration: none; */
+			width: 100%;
+			padding: 14px 0;
+			background: #87CEFA;
+		}
+		.footer p{
+			text-align: center;
+			color: #fff;
+			margin: 9px 0;
+		}
+		
+	</style>
+</head>
+<body>
+	
+	<div class="header">
+		<label class="menu" for="togglebox">
+			<img src="img/002.png" alt="" />
+		</label>
+		<nav> <!--导航栏-->
+			<input type="checkbox" id="togglebox" />
+			<ul>
+				<li><a class="active" href="index.html">首页</a></li>
+				<li><a href="#"><b>景点列表</b></a></li>
+				<li><a href="food.html"><b>景点小吃</b></a></li>
+				<li><a href="strategy.html"><b>旅游攻略</b></a></li>
+				<li><a href="video.html"><b>视频欣赏</b></a></li>
+				<li><a href="form.html"><b>投诉建议</b></a></li>
+			</ul>
+		</nav>
+		
+	</div>
+	
+	<div class="container">
+		
+		<div class="scenery">
+			<h5>请您欣赏故宫美景!</h5>
+			
+			<ul>
+				<li><img src="img/201.jpg"></li>
+				<li><img src="img/202.jpg"></li>
+				<li><img src="img/203.jpg"></li>
+				<li><img src="img/204.jpg"></li>
+				<li><img src="img/205.jpg"></li>
+				<li><img src="img/206.jpg"></li>
+				<li><img src="img/207.jpg"></li>
+				<li><img src="img/208.jpg"></li>
+				<li><img src="img/209.jpg"></li>
+			</ul>
+			<p>北京故宫是世界上现存规模最大,保存最为完整的木质结构古建筑之一,是国家AAAAA级旅游景区,1961年被列为第一批全国重点文物保护单位; 1987年被列为世界文化遗产。</p>
+		</div>
+		<div class="footer">
+			<p>The copyright bolder is Sunyongxin Yueshuhao Zangweilong </p>
+		</div>
+	</div>
+	
+</body>
+</html>

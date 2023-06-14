@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"> 
+<title>景点攻略</title> 
+<style>
+.header{
+				width: 100%;
+				background: lightcyan;
+				padding: 20px 40px;
+				position: relative;
+				overflow: visible;
+			}
+			
+    .header input[type="checkbox"],.menu01{
+    display: none;
+	}
+	.header ul{
+		overflow: hidden;
+	}
+	.header ul li{
+		list-style: none;
+		float: left;
+		margin: 0 35px;
+	}
+	/*导航链接初始状态*/
+	.header ul li a{
+		font-size: 20px;
+		font-family: "楷体";
+		color: deepskyblue;
+		text-decoration: none;
+		transition: 0.5s all;
+	}
+	
+	.banner,.banner img{
+		width: 100%;
+	}
+	
+	/*导航链接hover状态及首页链接的状态*/
+	.header ul li a:hover,.header ul li a.active{
+		color: green;
+	}
+	
+	@media (max-width:720px){
+		.header .menu01{
+			display: block;
+			cursor: pointer;
+		}
+		.header nav ul{
+			display: none;
+		}
+		nav input[type="checkbox"]:checked~ul{
+			display: block;
+		}
+		.header ul li{
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin: 5px 0;
+		}
+		.mission-container{
+		display: flex;
+		flex-flow: column;
+	}
+		.mission-left{
+			margin-bottom: 10px;
+		}
+		
+	}
+	
+.container{
+			width: 100%;
+			position: absolute;
+			background-color: #fff;
+			top: 100%;
+		}
+		
+		a{
+			color: #000;
+			font-size: 18px;
+			text-decoration: none;
+		}
+		a:hover{
+			color: red;
+		}
+		
+		.footer{
+			width: 100%;
+			height: 30px;
+			background: lightblue;
+			color: #87CEFA;
+			text-align: center;
+		}
+		.footer p{
+			width: 100%;
+			height: 30px;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+		}
+		
+	
+
+* {
+    box-sizing: border-box;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+html {
+    font-family: "楷体";
+	color: #0062CC;
+}
+/* .header 1{
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+} */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+	text-align: center;
+	font-size: 10px;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+
+
+
+
+
+/* For desktop: */
+
+.col-3 {width: 25%;}
+.col-6 {width: 50%  text-align: center;}
+.col-7 {width: 58.33%;}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+			<label class="menu01" for="togglebox">
+				<img src="img/002.png" alt="" />
+			</label>
+			<nav> <!--导航栏-->
+				<input type="checkbox" id="togglebox" />
+				<ul>
+					<li><a class="active" href="index.html">首页</a></li>
+					<li><a href="scenery.html"><b>景点列表</b></a></li>
+					<li><a href="food.html"><b>景点小吃</b></a></li>
+					<li><a href="#"><b>旅游攻略</b></a></li>
+					<li><a href="video.html"><b>视频欣赏</b></a></li>
+					<li><a href="form.html"><b>投诉建议</b></a></li>
+				</ul>
+			</nav>
+			
+</div>
+
+<div class="row">
+
+<div class="menu">
+<ul>
+<a href="#h01"style="text-decoration: none;"><li>旅游简介</li></a>
+<a href="#h02"style="text-decoration: none;"><li>旅游路线</li></a>
+<a href="#h03"style="text-decoration: none;"><li>门票价格</li></a>
+<a href="#h04"style="text-decoration: none;"><li>开放时间</li></a>
+<a href="#h05"style="text-decoration: none;"><li>到达方式</li></a>
+<a href="#h06"style="text-decoration: none;"><li>景区服务</li></a>
+<a href="#h07"style="text-decoration: none;"><li>注意事项</li></a>
+<a href="https://map.baidu.com/search/%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2/@12958106.939947337,4827244.28179692,20.6z?querytype=inf&uid=06d2dffda107b0ef89f15db6&wd=%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2&all=1&c=218&provider=pc-aladin&da_src=shareurl"><li>位置：中国-北京市-西城区</li></a>
+
+
+</ul>
+</div>
+
+
+
+<div >
+<div>
+<img src="img/0011.jpg" width="100%">
+</div>
+</div>
+
+
+
+
+
+<div class="col-6">
+<h1 id="h01">北京故宫</h1>
+<p>古迹游、文化游、亲子游、博物馆、皇家园林、古建筑。</p>
+<p>国家5A级景区、世界文化遗产、全国重点文物保护单位。</p>
+<p>世界上现存规模最大、保存最为完整的木质结构的古建筑之一，与法国凡尔赛宫、英国白金汉宫、美国白宫、俄罗斯克里姆林宫并称世界五大宫殿。故宫旧称紫禁城，始建于明成祖朱棣永乐四年（公元1406年），历经14年建成竣工，是中国明、清两代24位皇帝的皇家宫殿，也是中国古代汉族宫廷建筑之精华，无与伦比的建筑杰作。</p>
+</div>
+
+
+
+
+
+
+
+<div class="col-6">
+<h1 id="h02">故宫旅游路线</h1>
+<p>两小时路线：午门 → 太和门 → 弘义阁 → 太和殿 → 中和殿 → 保和殿 → 军机处 → 乾清门 → 乾清宫 → 交泰殿 → 坤宁宫 → 御花园 → 神武门。</p>
+<p>半日游：午门 → 太和门 → 弘义阁 → 太和殿 → 中和殿 → 保和殿 → 军机处 → 养心殿 → 永寿宫 → 太极殿 → 长春宫 → 翊坤宫 → 储秀宫 → 咸福宫 → 御花园 → 坤宁宫 → 交泰殿 → 乾清宫 → 乾清门 → 奉先殿（钟表馆） → 锡庆门 → 九龙壁 → 皇极门 → 皇极殿 → 宁寿宫 → 畅音阁 → 养性殿（珍宝馆） → 宁寿宫花园（乾隆花园） → 乐寿堂 → 颐和轩 → 符望阁 → 珍妃井 → 神武门。</p>
+<p>一日游：午门 → 熙和门 → 武英殿 → 熙和门 → 太和门 → 弘义阁 → 太和殿 → 中和殿 → 保和殿 → 军机处 → 养心殿 → 永寿宫 → 太极殿 → 长春宫 → 翊坤宫 → 储秀宫 → 咸福宫 → 御花园 → 坤宁宫 → 交泰殿 → 乾清宫 → 乾清门 → 奉先殿（钟表馆） → 锡庆门 → 九龙壁 → 皇极门 → 皇极殿 → 宁寿宫 → 畅音阁 → 养性殿（珍宝馆） → 宁寿宫花园（乾隆花园） → 乐寿堂 → 颐和轩 → 符望阁 → 珍妃井 → 东筒子 → 苍震门 → 延禧宫 → 景仁宫 → 斋宫 → 承乾宫 → 永和宫 → 景阳宫 → 钟粹宫 → 钦安殿 → 神武门。</p>
+</div>
+
+<div class="col-6">
+<h1 id="h03">故宫门票价格</h1>
+<p>故宫全部网上售票，可在官网或现场扫码买票。</p>
+<p>旺季（4月1日--10月31日）：60元/人</p>
+<p>淡季（11月1日--次年3月31日）：40元/人</p>
+<p>珍宝馆（宁寿宫区，包括戏曲馆、石鼓馆）：10元/人</p>
+<p>钟表馆（奉先殿区）：10元/人</p>
+<p>优惠措施：身高1.2米以下儿童可以随监护人免票参观，离休干部、残疾人等凭证件免费；大中小学生凭证件每张20元/人，60岁以上（包括60岁）老年人凭有效证件门票半价。</p>
+<p>节日优惠：“六一”儿童节，14周岁以下的儿童（含14周岁）可以免费参观，随同家长一人可享受半价优惠。“三八”妇女节，女性观众可享受门票半价优惠。“八一”建军节，现役中国军人可凭有效证件免费参观</p>
+<p>半价优惠（2014年9月12日至14日试行）：当日14时以后入院优惠票价为30元，不包含专馆。现场不销售半日优惠门票，需提前官网预订。</p>
+<p>年票（2014年10月可订）：成人票300元，老人和学生150元，一年内可凭票参观10次，使用次数满额后停止使用。该票不含参观专馆的费用，每个证件一年只能购买一次。</p>
+<p>主题免费开放日：2014年至2015年淡季每月的第一个星期三，对教师、医护人员、志愿者、现役军人、公安民警、大专院校学生免费。</p>
+</div>
+
+<div class="col-6">
+<h1 id="h04">故宫开放时间</h1>
+<p>【旺季】 8:30～16:00售票，16:10停止入馆，17:00清场；</p>
+<p>【淡季】 8:30～15:30售票，15:40停止入馆，16:30清场。</p>
+<p>每周一（包括寒暑假期间）全天闭馆，法定节假日除外。</p>
+</div>
+
+<div class="col-6">
+<h1 id="h05">故宫的到达方式</h1>
+<p>南侧（午门）入馆：地铁1号线天安门东或天安门西站；公交1、2、5、10、22、82、120、37、52、59、126、90、99、203、205、210、728路、专1路、专2路，到天安门东站或天安门西站下车。</p>
+<p>北侧的神武门和东侧的东华门，仅作为参观出口，不可由此进入参观。</p>
+</div>
+
+<div class="col-6">
+<h1 id="h06">故宫景区服务</h1>
+<p>语音导游租赁：午门与神武门内，汉语版、粤语版每台20元，其他语种每台40元。参观完毕，请在出院前将语音讲解器交至讲解服务处。</p>
+<p>讲解服务：午门、神武门；5人或5人以下全程250元，中、西路150元，中路100元；5人以上，每增加1人，加收10元。</p>
+<p>存包处：午门与神武门外东侧，工作时间为8:30-18:00。存包行李可在午门（南门）至神武门（北门）之间免费运送；观众也可选择接受安全检查后随身携带。</p>
+<p>观众咨询中心：太和门、箭亭</p>
+<p>自动柜员机（ATM）：钟表馆门口有中国银行的ATM取款机；珍宝馆门口有中国工商银行的ATM取款机。</p>
+</div>
+
+<div class="col-6">
+<h1 id="h07">故宫注意事项</h1>
+<p>1、如果有吸烟的习惯，请您在故宫博物院内参观游览时克制，并提醒他人不要吸烟！</p>
+<p>2、请不要在古建筑和古树上刻画涂写，不仅不会使您英名永驻，反而遭到大家的鄙视。</p>
+<p>3、按照国际惯例在展厅请勿使用闪光灯和三脚架拍照。</p>
+<p>4、与其他博物馆合作举办的展览以及特色商品店，不允许观众拍照展品。</p>
+</div>
+
+
+
+</div>
+
+<div class="footer">
+<p>The copyright bolder is Sunyongxin Yueshuhao Zangweilong</p>
+</div>
+
+</body>
+</html>

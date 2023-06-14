@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>投诉建议</title>
+		<style type="text/css">
+		
+		*{
+						padding: 0;
+						margin: 0;
+						box-sizing: border-box;
+						border: 0;
+					}
+					/*头部样式*/
+					.header{
+						width: 100%;
+						height: 100%;
+						background: lightcyan;
+						padding: 20px 50px;
+						position: relative;
+						overflow: visible;
+					}
+					.header input[type="checkbox"],.menu{
+						display: none;
+					}
+					/*头部的导航*/
+					.header ul{
+						overflow: hidden;
+					}
+					.header ul li{
+						list-style: none;
+						float: left;
+						margin: 0 80px;
+					}
+					/*导航链接初始状态*/
+					.header ul li a{
+						font-size: 20px;
+						font-family: "楷体";
+						color: deepskyblue;
+						text-decoration: none;
+						transition: 0.5s all;
+					}
+					/*导航链接hover状态及首页链接的状态*/
+					.header ul li a:hover,.header ul li a.active{
+						color: green;
+					}
+					/*logo的显示区域设置宽度和定位*/
+					
+					/*logo图片的大小*/
+					
+					/*banner部分样式*/
+					.banner,.banner img{
+						width: 100%;
+					}
+					/*mission部分样式*/
+					.mission{
+						width: 100%;
+						background: lightskyblue;
+						padding: 30px;
+					}
+					.mission-header h3{
+						color: red;
+						text-align: center;
+						font-family: "微软雅黑";
+						font-size: 2.4em;
+						font-weight: 400;
+					}
+					.mission-container{
+						margin-top: 20px;
+						overflow: hidden;
+						display: flex;
+					}
+					.mission-left{
+						
+						flex: 1;
+						padding: 0 10px;
+					}
+					.mission-left img{
+						width: 100%;
+					}
+					.mission-right{
+						
+						flex: 1;
+						padding: 0 10px;
+					}
+					.mis{
+						width: 100%;
+						margin-bottom: 2rem;
+						overflow: hidden;
+						display: flex;
+					}
+					.mis-left{
+						
+						flex: 1;
+						margin-left: 10px;
+					}
+					.mis-left img{
+						width: 100%;
+					}
+					.mis-right{
+						
+						flex: 6;
+					}
+					.mis-right h3{
+						font-family: 宋体;
+						font-size: 1em;
+						color: orangered;
+					}
+					.mis-right p{
+						font-size: 0.85em;
+						line-height: 1.8em;
+						margin-top: 12px;
+						text-indent: 2em;
+					}
+					.footer{
+						/* text-decoration: none; */
+						width: 100%;
+						padding: 5px 0;
+						background: #87CEFA;
+					}
+					.footer p{
+						text-align: center;
+						color: #fff;
+						margin: 9px 0;
+					}
+					@media (max-width:720px){
+						.header .menu{
+							display: block;
+							cursor: pointer;
+						}
+						.header nav ul{
+							display: none;
+						}
+						nav input[type="checkbox"]:checked~ul{
+							display: block;
+						}
+						.header ul li{
+							display: block;
+							width: 100%;
+							text-align: center;
+							margin: 5px 0;
+						}
+						.mission-container{
+						display: flex;
+						flex-flow: column;
+					}
+						.mission-left{
+							margin-bottom: 10px;
+						}
+						
+					}
+					
+					
+					.fo{
+						
+						background-color: #33B5E5;
+						background-repeat: no-repeat;
+						
+						
+					}
+					
+					
+					form{
+						
+									width: 343px;
+									margin: 0 auto;
+									padding: 30px;
+									border: 1px rgba(0,0,0,.2);
+									border-radius: 5px;
+									
+								}
+								ul,
+								li{
+									padding: 0;
+									margin: 0;
+									list-style: none;
+									
+								}
+								ul li{
+									height: 50px;
+									
+								}
+								
+							.right{
+								float: right;
+								width: 180px;
+								
+							}
+							input:focus{
+								background-color: rgba(0,0,0,0.2);
+								overflow: hidden;
+							}
+							form .footer{
+								text-align: center;
+								
+							}
+							input[type=submit]{
+								width: 100px;
+								height: 30px;
+								margin-top: 10px;
+								cursor: pointer;
+							}
+							.advise{
+								height: 150px;
+								
+							}
+							textarea{
+								width: 100%;
+								height: 100px;
+							}
+					
+					
+					
+			.carousel{
+				position: relative;
+				width: 100%;
+				height: auto;
+				margin: 0 auto;
+			}
+			.carousel-inner{
+				position: relative;
+				width: 100%;
+				overflow: hidden;
+			}
+			.carousel-inner > .item{
+				position: relative;
+				display: none;
+				transition: .6s ease-in-out left;
+			}
+			.carousel-inner > .active{
+				display: block;
+				left: 0;
+				-webkit-transform: translate3d(0,0,0);
+				transform:translate3d(0,0,0)
+			}
+			.carousel-inner > .item > a > img{
+				display: block;
+				max-width: 100%;
+				height: auto;
+				line-height: 1;
+				vertical-align: middle;/* 属性设置元素的垂直对齐方式。 */
+				border: 0;
+			}
+			
+			.carousel-indicators{
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				z-index: 15;/* 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。 */
+				width: 60%;
+				padding-left: 0;
+				margin-left: -30%;
+				text-align: center;
+				list-style: none;
+			}
+			.carousel-indicators > b{
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin: 1px;
+				text-indent: -999px;
+				cursor: pointer;/* 属性规定要显示的光标的类型（形状）。 */
+				background-color: rgba(0,0,0,0);
+				border: 1px solid #fff;
+				border-radius: 10px;
+			}
+			.carousel-indicators .active{
+				width: 12px;
+				height: 12px;
+				margin: 0;
+				background-color: #fff;
+			}
+			.carousel-control{
+				position: absolute;
+				top:50%;
+				transform: translateY(-50%);
+				color: #fff;
+				font-size: 72px;
+				line-height: 72px;
+				text-align: center;
+				text-shadow: 0 1px 2px rgba(0,0,0,.6);
+				width: 72px;
+				z-index: 10;
+				cursor: pointer;
+			}
+			.carousel-control.left{
+				left: 0;
+			}
+			.carousel-control.right{
+				right: 0;
+			}
+			
+			.box{
+				text-align: center;
+				font-size: 18px;
+				font-family: "微软雅黑";
+				color: #20C997;
+			}
+		</style>
+		<script type="text/javascript">
+		//		<!--第1部分：获取当前的时间-->
+				var date=new Date();//基于当前时间创建date对象
+		//		在浏览器页面中输出当前的时间
+				console.log('今天是'+date.getFullYear()+'年'+(date.getMonth()+1)+'月'+date.getDate()+'日'+'星期'+date.getDay());
+				
+		//		<!--第2部分：倒计时-->
+		//      定义倒计时的结束时间
+				var endTime=new Date('2022-04-01 00:00:00');
+				endSeconds=endTime.getTime();
+		//		定义变量保存剩余的时间
+				var d=h=m=s=0;
+		//		设计定时器,实现倒计时效果,setInterval()可以按照指定的周期(以毫秒计)调用函数
+				var id=setInterval(countdown,1000);
+		//		定义倒计时函数countdown()
+				function countdown(){
+					var nowTime=new Date(); //获取当前时间
+		//			获取时间差,以毫秒为单位
+		        var remaining=parseInt((endSeconds-nowTime.getTime())/1000);
+		        if(remaining>0){  //判断倒计时是否过期
+		//      	计算剩余天数:remaining/60/60/24取整
+		        	d=parseInt(remaining/86400);
+		//      	计算剩余小时:remaining/60/60取整
+		        	h=parseInt(remaining/3600%24);
+		//      	计算剩余分钟:remaining/60取整
+		        	m=parseInt((remaining/60)%60);
+		//      	计算剩余秒数:remaining%60取余
+		        	s=parseInt(remaining%60);
+		        }else{
+		        	clearInterval(id);
+		        	d=h=m=s=0;
+		        }
+		        document.getElementById('d').innerHTML=d;
+		        document.getElementById('h').innerHTML=h;
+		        document.getElementById('m').innerHTML=m;
+		        document.getElementById('s').innerHTML=s;
+				}
+				</script>
+	</head>
+	<body>
+		<div class="header">
+			<label class="menu" for="togglebox">
+				<img src="img/002.png" alt="" />
+			</label>
+			<nav> <!--导航栏-->
+				<input type="checkbox" id="togglebox" />
+				<ul>
+					<li><a href="index.html" class="active">首页</a></li>
+					<li><a href="scenery.html">景点列表</a></li>
+					<li><a href="food.html">景点小吃</a></li>
+					<li><a href="strategy.html">旅游攻略</a></li>
+					<li><a href="video.html">视频欣赏</a></li>
+					<li><a href="#">投诉建议</a></li>
+				</ul>
+				
+				
+			</nav>
+		<div class="box">
+			距离故宫的旅游旺季还有
+			<span id="d"></span>天
+			<span id="h"></span>小时
+			<span id="m"></span>分钟
+			<span id="s"></span>秒
+		</div>
+		</div>
+		
+	
+		
+		
+		<div class="carousel" id="carousel"> <!-- carousel表示轮播图-->
+			<!--轮播图内部-->
+			<div class="carousel-inner">
+				<!--轮播的每一张图片-->
+				<!--图片1-->
+				<div class="item">  
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0011.jpg"/>
+						<!-- <div class="carousel-caption">呼叫中心语音识别发布</div> -->
+					</a>
+				</div>
+				
+				<!--图片2-->
+				<div class="item">
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0012.jpg"/>
+						<!-- <div class="carousel-caption">自定义模板文字识别发布</div> -->
+					</a>
+				</div>
+				
+				<!--图片3-->
+				<div class="item">
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0013.jpg"/>
+						<!-- <div class="carousel-caption">UNIT扫码接入微信公众号</div> -->
+					</a>
+				</div>
+				
+				<!--图片4-->
+				<div class="item">
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0014.jpg"/>
+						<!-- <div class="carousel-caption">人体分析正式上线</div> -->
+					</a>
+				</div>
+				
+				<!--图片5-->
+				<div class="item">
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0015.jpg"/>
+						<!-- <div class="carousel-caption">人脸识别离线SDK全面开放</div> -->
+					</a>
+				</div>
+				
+				<!--图片6-->
+				<div class="item">
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0016.jpg"/>
+						<!-- <div class="carousel-caption">EasyDL定制化图像识别</div> -->
+					</a>
+				</div>
+				
+				<!--图片7-->
+				<div class="item">
+					<a href="#" class="ai-banner-contain" target="_blank">
+						<img src="img/0017.jpg"/>
+						<!-- <div class="carousel-caption">PaddlePaddle中文社区上线</div> -->
+					</a>
+				</div>
+				
+				<!--指示器-->
+				<div class="carousel-indicators">
+					<b></b>
+					<b></b>
+					<b></b>
+					<b></b>
+					<b></b>
+					<b></b>
+					<b></b>
+				</div>
+				<!--左箭头-->
+				<div class="carousel-control left">&lsaquo;</div>
+				<!--右箭头-->
+				<div class="carousel-control right">&rsaquo;</div>
+			</div>
+		</div>
+		
+		<div  class="fo" >
+		<form>
+			<center><h2 >投诉建议</h2></center>
+			<center><h4>请提交数据，联系我们！</h4></center>
+			<li>
+				<label>标题：</label>
+				<input class="text" type="text" value="" maxlength="1"/>
+			</li>
+			<li class="advise">
+				<label>内容：</label><br />
+				<textarea name="opinion" cols="35" rows="20"></textarea><!-- 标签定义多行的文本输入控件。 -->
+			</li>
+			<li>
+				<label>相关材料：</label>
+				<input class="text" type="file" />
+			</li>
+			<li>
+				<label for="email">邮箱：
+				</label><input type="email" id="email" name="email"  /><br>
+			</li>
+				<input type="submit" name="submit" value="提交" />	
+		</form>
+		</div>
+		
+		<div class="footer">
+			<p>The copyright bolder is Sunyongxin Yueshuhao Zangweilong </p>
+		</div>
+		
+		
+		<script>
+			var innerItems = document.getElementsByClassName('item');
+			var indicatorsLists = document.getElementsByTagName('b');
+			var controlLeft = document.getElementsByClassName('left')[0];
+			var controlRight = document.getElementsByClassName('right')[0];
+			var current = 0;
+			innerItems[current].className = 'item active';
+			indicatorsLists[current].className = 'active';
+			
+			function slide(){
+				for (var i = 0;i < indicatorsLists.length; i++) {
+					innerItems[i].className = 'item';
+					indicatorsLists[i].className = '';
+					indicatorsLists[i].index = i;
+					indicatorsLists[i].onclick = function(){
+						if(this.index == current){
+							return false;
+						}else{
+							current = this.index;
+							slide();
+						}
+					}
+				}
+				innerItems[current].className = "item active";
+				indicatorsLists[current].className = 'active';
+				console.log(current);
+			}
+			controlLeft.onclick = function(){
+				current--;
+				if(current == -1){
+					current = indicatorsLists.length - 1;
+				}
+				    slide();
+			};
+			controlRight.onclick = function(){
+				current++;
+				if(current == indicatorsLists.length){
+					current = 0;
+				}
+				    slide();
+			}
+			var timer = setInterval(controlRight.onclick,1000);
+			controlLeft.onmouseover = controlRight.onmouseover = function(){
+				clearInterval(timer);
+				controlLeft.style.opacity = 1;
+				controlRight.style.opacity = 1;
+			};
+			controlLeft.onmouseout = controlRight.onmouseout = function(){
+				timer = setInterval(controlRight.onclick,3000);
+				controlLeft.style.opacity = 0;
+				controlRight.style.opacity = 0;
+			};
+		</script>
+	</body>
+</html>
